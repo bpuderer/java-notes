@@ -1,6 +1,6 @@
 package javatutorial;
 
-public final class Primitives {
+public class Primitives {
 
 	public static void main(String[] args) {
 		

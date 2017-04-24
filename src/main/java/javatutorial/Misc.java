@@ -1,6 +1,6 @@
 package javatutorial;
 
-public final class Misc {
+public class Misc {
 
 	public static void main(String[] args) {
 		

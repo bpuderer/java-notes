@@ -1,6 +1,6 @@
 package javatutorial;
 
-public final class Operators {
+public class Operators {
 
 	public static void main(String[] args) {
 		
