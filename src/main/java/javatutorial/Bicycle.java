@@ -6,27 +6,31 @@ public class Bicycle {
 	// private - just class
 	// protected - class, package, subclass
 	// none - class, package
-	int numGears;
 	int gear;
+	int numGears;
 	static int numBikes = 0; // class variable
 	static final double SCORE = 2.83e1; // constant
 
 	public Bicycle() {
 		// explicit constructor invocation
-		this(3, 1);
+		this(1, 3);
 	}
 
 	// if no constructor defined, default constructor called -
 	// class parent's no-arg constructor
-	public Bicycle(int numGears, int startGear) {
-		this.numGears = numGears;
+	public Bicycle(int startGear, int numGears) {
 		this.gear = startGear;
+		this.numGears = numGears;
 		Bicycle.numBikes++;
 	}
 
 	// name and parameter types define method signature
 	public void setGear(int gear) {
 		this.gear = gear;
+	}
+	
+	public void printBike() {
+		System.out.format("Bike: %d/%d%n", gear, numGears);
 	}
 
 	// class method
@@ -39,12 +43,10 @@ public class Bicycle {
 		System.out.println("number of bikes: " + Bicycle.getNumBikes());
 
 		Bicycle bike1 = new Bicycle(24, 12);
-		System.out.println("bike1 gears: " + bike1.numGears);
-		System.out.println("bike1 current gear: " + bike1.gear);
+		bike1.printBike();
 
 		Bicycle bike2 = new Bicycle();
-		System.out.println("bike2 gears: " + bike2.numGears);
-		System.out.println("bike2 current gear: " + bike2.gear);
+		bike2.printBike();
 
 		System.out.println("number of bikes: " + Bicycle.numBikes);
 	}
