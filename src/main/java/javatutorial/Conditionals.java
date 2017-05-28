@@ -33,6 +33,9 @@ public class Conditionals {
 		String result = someCondition ? "true val" : "false val";
 		System.out.println("result: " + result);
 		
+		int temp1 = -3;
+		int temp2 = -4;
+		System.out.println(temp1 < temp2 ? -1 : (temp1 == temp2 ? 0 : 1));
 	}
 	
 }

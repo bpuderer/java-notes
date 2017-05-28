@@ -6,7 +6,7 @@ public class Misc {
 		
 		// types of variables: instance, class (static), local, parameters 
 		
-		// casting
+		// type casting
 		System.out.println((int) (Math.random() * 10));
 		
 	}
