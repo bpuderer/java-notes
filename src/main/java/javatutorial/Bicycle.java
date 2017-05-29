@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
 // public class Bicycle implements Comparable<Bicycle> {
+// class that's declared final cannot be subclassed 
 public class Bicycle {
 
 	// public - everyone
@@ -29,7 +31,7 @@ public class Bicycle {
 		this.gear = startGear;
 		this.numGears = numGears;
 		this.brand = brand;
-		Bicycle.numBikes++;
+		numBikes++;
 	}
 
 	public int getGear() { return gear; }
@@ -49,7 +51,7 @@ public class Bicycle {
 	}
 	
 	public void printBike() {
-		System.out.println(this.toString());
+		System.out.println(this);
 	}
 	
 	/*
@@ -65,6 +67,39 @@ public class Bicycle {
 		return String.format("Bike: %d/%d %s", gear, numGears, brand);
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Bicycle) {
+			Bicycle b = (Bicycle) obj;
+			return this.gear == b.getGear() && this.numGears == b.getNumGears() && this.brand.equals(b.getBrand());
+		}
+		else
+			return false;
+		
+		/*
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		
+		Bicycle b = (Bicycle) obj;
+		return this.gear == b.getGear() && this.numGears == b.getNumGears() && this.brand.equals(b.getBrand());
+		*/
+	}
+	
+	@Override
+	public int hashCode() {
+		// if you override equals, you must override hashCode as well
+		return Objects.hash(gear, numGears, brand);
+	}
+	
+	// final methods cannot be overridden
+	// methods called in constructors should be final
+	public final void cannotOverride() {
+		System.out.println("34-28");
+	}
 	
 	
 	public static void main(String[] args) {
@@ -98,6 +133,20 @@ public class Bicycle {
 		bikes.forEach(Bicycle::printBike);
 		
 		System.out.println("number of bikes: " + Bicycle.numBikes);
+		
+		
+		// equals and hashCode	
+		Bicycle b1 = new Bicycle(5, 11, "Trek");
+		Bicycle b2 = new Bicycle(5, 11, "Trek");
+		System.out.println(b1.equals(b2));
+		System.out.println(b1.hashCode());
+		System.out.println(b2.hashCode());
+
+		b1.setGear(3);
+		System.out.println(b1.equals(b2));
+		System.out.println(b1.hashCode());
+		System.out.println(b2.hashCode());
+		
 	}
 
 }

@@ -20,6 +20,7 @@ public interface InterfaceEx {
 	}
 	
 	// belongs to class rather than instance of class
+	// static methods in interfaces are never inherited
 	static void staticMethod() {
 		System.out.println("static method");
 	}
