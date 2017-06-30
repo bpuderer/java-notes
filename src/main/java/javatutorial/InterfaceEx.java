@@ -2,6 +2,7 @@ package javatutorial;
 
 
 public interface InterfaceEx {
+	// interfaces can only be implemented by classes or extended by other interfaces
 	// only constants, method signatures, default methods, static methods, nested types
 	// all abstract, default, and static methods in interface are implicitly public
 	
@@ -9,6 +10,8 @@ public interface InterfaceEx {
 	double SCORE = 2.83e1;
 	
 	// abstract - just declaration, no implementation
+	// methods in an interface that are not declared as default or static are
+	// implicitly abstract
 	void doSomething();
 
 	// if this interface is extended...
