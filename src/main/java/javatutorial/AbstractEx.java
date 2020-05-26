@@ -2,9 +2,8 @@ package javatutorial;
 
 
 public abstract class AbstractEx {
-	// abstract classes can only be subclassed
-	// if subclassed, all abstract methods need implementations or else
-	// it is abstract as well
+	// abstract classes can only be subclassed/extended.  templates.
+	// if subclassed, all abstract methods need implementations or else it is abstract as well
 	// may or may not include abstract methods 
 	
 	// vs. interfaces

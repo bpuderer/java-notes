@@ -2,11 +2,13 @@ package javatutorial;
 
 // implements follows extends
 public class ImplementsEx implements InterfaceExPlus {
-	
+
+	@Override
 	public void doSomething() {
 		System.out.println("something");
 	}
 
+	@Override
 	public void doAnotherThing() {
 		System.out.println("another thing");
 	}

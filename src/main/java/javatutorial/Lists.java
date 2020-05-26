@@ -11,24 +11,21 @@ public class Lists {
 		List<String> list = new ArrayList<>();
 		list.add("one");
 		list.add(0, "zero");
+		list.add("two");
+		list.remove("two");
 		System.out.println(list);
+		System.out.println(list.size());
 		System.out.println(list.get(1));
 		list.set(1, "One");
-		System.out.println(list.get(1));
+
+		// see Sets.java for other ways to iterate through
+		list.forEach(System.out::println);
 
 
-		list.forEach(s -> System.out.println(s));
-
-
-		for (String item : list) {
-			System.out.println(item);
-		}
-
-
-		Iterator<String> iterator = list.listIterator();
-		while (iterator.hasNext()) {
-			System.out.println(iterator.next());
-		}
+		// immutable list.  Convenience method added to List in JDK 9
+		List stringList = List.of("a", "b", "c");
+		System.out.println(stringList);
+		// stringList.add("d");  // UnsupportedOperationException
 		
 	}
 	

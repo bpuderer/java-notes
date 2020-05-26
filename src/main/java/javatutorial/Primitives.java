@@ -3,7 +3,10 @@ package javatutorial;
 public class Primitives {
 
 	public static void main(String[] args) {
-		
+
+		// all have wrapper classes: Byte, Short, Integer, Long, Float
+		// Double, Boolean, Character
+
 		byte b = 127;
 		
 		short s = 28;

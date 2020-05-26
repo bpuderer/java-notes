@@ -24,7 +24,7 @@ public class Looping {
 
 
 		// enhanced for
-		// also labeled version of break to terminate particular loop instead of innermost
+		// also labeled version of break exists to terminate particular loop instead of innermost
 		boolean foundIt = false;
 		int searchItem = 43;
 		int[] numbers = {28, 3, 42, 2112, 9};
@@ -42,15 +42,15 @@ public class Looping {
         }
 
         
-        // also labeled version of continue
-        int sum = 0;
+        // also labeled version of continue exists
+        int evenNumSum = 0;
         for (int item : numbers) {
         	if (item % 2 != 0) {
         		continue;
         	}
-        	sum += item;
+			evenNumSum += item;
         }
-        System.out.println("sum of even numbers in array: " + sum);
+        System.out.println("sum of even numbers in array: " + evenNumSum);
         
 	}
 	

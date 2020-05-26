@@ -22,7 +22,9 @@ public class MountainBike extends Bicycle {
 	public void setHasDiscBrakes(boolean hasDiscBrakes) {
 		this.hasDiscBrakes = hasDiscBrakes;
 	}
-	
+
+	// @Override annotation not technically required
+	// cannot change access modifier of overridden methods to be stricter (weaker access privileges)
 	@Override
 	public String toString() {
 		// use super to access overridden method of superclass
@@ -56,6 +58,11 @@ public class MountainBike extends Bicycle {
 		mb1.printBike();
 		
 		System.out.println(MountainBike.getNumBikes());
+
+
+		// polymorphism/casting example.  can only access methods of type, not instance
+		Bicycle mb2 = new MountainBike();
+		System.out.println(((MountainBike) mb2).getHasDiscBrakes());
 	}
 	
 }

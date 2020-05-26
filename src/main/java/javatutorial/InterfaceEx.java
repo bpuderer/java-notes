@@ -6,7 +6,7 @@ public interface InterfaceEx {
 	// only constants, method signatures, default methods, static methods, nested types
 	// all abstract, default, and static methods in interface are implicitly public
 	
-	// constants are implicitly public, static, final
+	// fields are implicitly public, static, final.  constant.
 	double SCORE = 2.83e1;
 	
 	// abstract - just declaration, no implementation
@@ -14,6 +14,7 @@ public interface InterfaceEx {
 	// implicitly abstract
 	void doSomething();
 
+	// Java 8 - default allows additions to interface w/o breaking implementations
 	// if this interface is extended...
 	// don't mention default method - inherited
 	// redeclare method - abstract
