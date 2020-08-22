@@ -1,0 +1,7 @@
+{
+  "db.user": "ben",
+  "db.connections": 1,
+  "obj": {
+    "name": "value"
+  }
+}
