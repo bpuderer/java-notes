@@ -35,6 +35,15 @@ public class Misc {
 		// type inference added in Java 10.  JEP 286 https://openjdk.java.net/jeps/286
 		// local only, initialization required, not allowed in headers
 		var list = new ArrayList<String>();
+
+		// auto-boxing - automatic conversion that the Java compiler makes between the primitive types
+		// and their corresponding object wrapper classes.  ex. int -> Integer
+		// unboxing is the reverse.
+
+
+		// var - local variable type inference.  Java 10
+		// https://developer.oracle.com/java/jdk-10-local-variable-type-inference.html
+
 	}
 	
 }

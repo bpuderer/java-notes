@@ -18,7 +18,7 @@ public class Looping {
 		}
 
 
-		for (int i=0; i < 3; i++) {
+		for (int i = 0; i < 3; i++) {
 			System.out.println("i: " + i);
 		}
 
@@ -28,30 +28,29 @@ public class Looping {
 		boolean foundIt = false;
 		int searchItem = 43;
 		int[] numbers = {28, 3, 42, 2112, 9};
-        for (int item : numbers) {
-        	if (item == searchItem) {
-        		foundIt = true;
-        		break;
-        	}
-        }
-        
-        if (foundIt) {
-        	System.out.println("found " + searchItem + " in array");
-        } else {
-        	System.out.println("did not find " + searchItem + " in array");
-        }
+		for (int item : numbers) {
+			if (item == searchItem) {
+				foundIt = true;
+				break;
+			}
+		}
 
-        
+		if (foundIt) {
+			System.out.println("found " + searchItem + " in array");
+		} else {
+			System.out.println("did not find " + searchItem + " in array");
+		}
+
+
         // also labeled version of continue exists
-        int evenNumSum = 0;
-        for (int item : numbers) {
-        	if (item % 2 != 0) {
-        		continue;
-        	}
+		int evenNumSum = 0;
+		for (int item : numbers) {
+			if (item % 2 != 0) {
+				continue;
+			}
 			evenNumSum += item;
-        }
-        System.out.println("sum of even numbers in array: " + evenNumSum);
-        
+		}
+		System.out.println("sum of even numbers in array: " + evenNumSum);
+
 	}
-	
 }

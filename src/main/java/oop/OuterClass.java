@@ -1,4 +1,4 @@
-package javatutorial;
+package oop;
 
 public class OuterClass {
 	int x = 0;

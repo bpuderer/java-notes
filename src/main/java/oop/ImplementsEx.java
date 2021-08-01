@@ -1,4 +1,4 @@
-package javatutorial;
+package oop;
 
 // implements follows extends
 public class ImplementsEx implements InterfaceExPlus {

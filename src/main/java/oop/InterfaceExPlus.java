@@ -1,4 +1,4 @@
-package javatutorial;
+package oop;
 
 //an interface can extend multiple interfaces 
 //extends Interface1, Interface2...

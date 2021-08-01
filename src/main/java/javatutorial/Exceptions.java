@@ -10,6 +10,7 @@ public class Exceptions {
         // also see try-with-resources.  Resources are declared in try and closed when leaving try/catch.
         // Resources must implement Autocloseable or Closable interfaces
         // Like Python's context management protocol
+        // https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
 
         try {
             throwException();
@@ -27,6 +28,7 @@ public class Exceptions {
     }
 
     public static void throwException() throws UnsupportedOperationException, IOException {
+        // thows in declaration shifts responsibility to the method calling this method to handle the exception
         Random random = new Random();
         if (random.nextBoolean()) throw new UnsupportedOperationException();
         throw new IOException("Thrown by luck");

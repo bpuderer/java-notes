@@ -1,13 +1,15 @@
 package javatutorial;
 
-public enum LogLevel {
+public enum EnumLogLevel {
 	CRITICAL(50), ERROR(40), WARNING(30), INFO(20), DEBUG(10), NOTSET(0);
 
 	private final int code;
 	
-	LogLevel(int val) {
-		this.code = val;
+	private EnumLogLevel(int code) {
+		this.code = code;
 	}
 	
-	int code() { return code; }
+	 public int code() {
+		return this.code;
+	}
 }

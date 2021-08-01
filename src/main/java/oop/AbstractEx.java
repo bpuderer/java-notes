@@ -1,4 +1,4 @@
-package javatutorial;
+package oop;
 
 
 public abstract class AbstractEx {
@@ -11,9 +11,15 @@ public abstract class AbstractEx {
 	// can define public, protected and private concrete methods
 	// with interfaces all fields are public, static, final
 	// with interfaces all methods are public
+
+	private final String name;
+
+	public AbstractEx(String name) {
+		this.name = name;
+	}
 	
-	void concreteMethod() {
-		System.out.println("concreteMethod in AbstractEx");
+	public String getName() {
+		return this.name;
 	}
 	
 	// abstract method = no implementation

@@ -1,5 +1,7 @@
 package javatutorial;
 
+import oop.Bicycle;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,7 +22,7 @@ public class LambdasMethodRefs {
 		// use method reference instead of lambda for existing methods
 
 		// bikes.forEach(b -> b.printBike());
-		bikes.forEach(Bicycle::printBike);
+		bikes.forEach(Bicycle::printBike);  // method ref
 		// bikes.forEach(System.out::println);
 		
 		System.out.println("Greater than 10 speeds:");

@@ -13,39 +13,25 @@ public class Sets {
         // TreeSet - poor performance, ordered based on values
         // LinkedHashSet - slightly slower than HashSet, insertion-ordered
 
-        // Collection<Type> noDups = new HashSet<Type>(c);
+        // Collection<Type> noDupes = new HashSet<Type>(c);
 
         // From Oracle tutorial:
         // Note that the code always refers to the Collection by its interface type (Set) rather than by its
         // implementation type. This is a strongly recommended programming practice because it gives you the
         // flexibility to change implementations merely by changing the constructor.
 
-        Set<String> hs = new HashSet<String>();
+        Set<String> hs = new HashSet<>();
         hs.add("first");
         hs.add("first");
         hs.add("second");
+        hs.add("third");
         System.out.println(hs);
-
-        // iterating through set
-        /*
-        var i = hs.iterator();
-        while (i.hasNext()) {
-            System.out.println(i.next());
-        }
-
-        for (Iterator<String> iterator = hs.iterator(); iterator.hasNext(); ) {
-            String s = iterator.next();
-            System.out.println(s);
-        }
-
-        for (String s : hs) {
-            System.out.println(s);
-        }
-
-        hs.forEach(x -> System.out.println(x));
-        */
-
-        hs.forEach(System.out::println);
+        System.out.println(hs.size() + " objects in the set");
+        System.out.println("set contains \"first\": " + hs.contains("first"));
+        System.out.println("removing \"first\"");
+        hs.remove("first");
+        System.out.println("set contains \"first\": " + hs.contains("first"));
+        System.out.println(hs);
 
 
         // immutable Set

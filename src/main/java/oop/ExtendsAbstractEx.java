@@ -1,6 +1,10 @@
-package javatutorial;
+package oop;
 
 public class ExtendsAbstractEx extends AbstractEx {
+
+	public ExtendsAbstractEx() {
+		super("ExtendsAbstractEx");
+	}
 
 	@Override
 	void doSomething() {
@@ -13,7 +17,7 @@ public class ExtendsAbstractEx extends AbstractEx {
 		// AbstractEx obj = new AbstractEx();
 		
 		AbstractEx obj = new ExtendsAbstractEx();
-		obj.concreteMethod();
+		System.out.println(obj.getName());
 		obj.doSomething();
 	}
 }

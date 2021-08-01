@@ -1,10 +1,10 @@
-package javatutorial;
+package oop;
 
 import java.util.Objects;
 
 public class MountainBike extends Bicycle {
 
-	boolean hasDiscBrakes;
+	private boolean hasDiscBrakes;
 	
 	public MountainBike() {
 		this(1, 14, "Huffy", false);
